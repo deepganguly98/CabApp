@@ -1,0 +1,476 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.cabapp.deep.CustomerMapActivity">
+
+    <!--<android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_map"
+        app:menu="@menu/activity_map_drawer" />-->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30sp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttons"
+            >
+            <Button
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:background="@drawable/buttonshape"
+                android:text="LOGOUT"
+                android:fontFamily="@font/avantgrande"
+
+                android:id="@+id/logout"
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:background="@drawable/buttonshape"
+                android:text="HISTORY"
+                android:id="@+id/history"
+                android:fontFamily="@font/avantgrande"
+
+
+                />
+            <Button
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:layout_width="0dp"
+                android:text="SETTINGS"
+                android:fontFamily="@font/avantgrande"
+
+                android:id="@+id/settings"
+
+                />
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="70sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            app:cardCornerRadius="10dp"
+
+            >
+            <fragment
+                android:layout_below="@+id/place_autocomplete_fragment"
+                android:id="@+id/location_autocomplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avantgrande"
+
+
+
+                android:hint="pickup location"
+
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                />
+
+
+
+
+
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="135sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginRight="30sp"
+            app:cardCornerRadius="10dp"
+
+            >
+            <fragment
+                android:layout_below="@+id/settings"
+                android:id="@+id/place_autocomplete_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="where to?"
+                android:fontFamily="@font/avantgrande"
+
+
+
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                />
+
+
+
+
+
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="bottom">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@mipmap/ic_target"
+            android:layout_margin="16dp"
+            app:backgroundTint="#ffffff"/>
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/driverInfo"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:visibility="gone"
+        android:layout_marginBottom="30sp">
+
+        <ImageView
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:id="@+id/driverProfileImage"
+            android:src="@mipmap/ic_default_user"
+            android:padding="20sp"
+            />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="40sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driverName"
+                android:paddingBottom="5sp"
+                android:fontFamily="@font/avantgrande"
+                android:paddingTop="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driverPhone"
+                android:paddingBottom="5sp"
+                android:fontFamily="@font/avantgrande"
+
+                android:paddingTop="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driverCar"
+                android:paddingBottom="5sp"
+                android:fontFamily="@font/avantgrande"
+
+                android:paddingTop="10sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/driverLicense"
+                android:paddingBottom="5sp"
+                android:paddingTop="10sp"
+                android:fontFamily="@font/avantgrande"
+
+                />
+            <RatingBar
+                android:layout_marginLeft="-2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:stepSize="0.1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/predictFare"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:text="X"
+                android:id="@+id/closePredictBar"
+                android:background="#f45642"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                />
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:paddingLeft="20sp">
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:id="@+id/cabPredict"
+                    android:src="@mipmap/ic_cab"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="20sp"
+                    />
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cabPredict"
+                    android:paddingBottom="20sp"
+                    android:paddingTop="0sp"
+                    android:textAlignment="center"
+                    android:text="Cab"
+                    android:textColor="#222"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="30sp"
+                    android:fontFamily="@font/avantgrande"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title1"
+                    android:layout_marginTop="-20sp"
+                    android:text=""
+                    android:layout_marginLeft="10sp"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:fontFamily="@font/avantgrande"
+                    android:padding="5sp"
+                    android:id="@+id/pFareC"
+
+                    />
+
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:id="@+id/bikePredict"
+                    android:src="@mipmap/ic_bike"
+                    android:paddingTop="20sp"
+                    android:layout_marginLeft="100sp"
+                    />
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bikePredict"
+                    android:paddingBottom="20sp"
+                    android:paddingTop="0sp"
+                    android:textAlignment="center"
+                    android:text="Bike"
+                    android:textColor="#222"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="130sp"
+                    android:fontFamily="@font/avantgrande"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title2"
+                    android:layout_marginTop="-20sp"
+                    android:layout_marginLeft="110sp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:fontFamily="@font/avantgrande"
+                    android:padding="5sp"
+                    android:id="@+id/pFareB"
+
+                    />
+                <ImageView
+                    android:layout_width="90sp"
+                    android:layout_height="90sp"
+                    android:id="@+id/autoPredict"
+                    android:src="@mipmap/ic_auto"
+                    android:paddingTop="20sp"
+                    android:layout_marginLeft="200sp"
+                    />
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/autoPredict"
+                    android:paddingBottom="20sp"
+                    android:paddingTop="0sp"
+                    android:textAlignment="center"
+                    android:text="Auto"
+                    android:textColor="#222"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="220sp"
+                    android:fontFamily="@font/avantgrande"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title3"
+                    android:layout_marginTop="-20sp"
+                    android:layout_marginLeft="210sp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:fontFamily="@font/avantgrande"
+                    android:padding="5sp"
+                    android:id="@+id/pFareA"
+
+                    />
+                <TextView
+                    android:layout_below="@+id/pFareC"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:fontFamily="@font/avantgrande"
+                    android:padding="5sp"
+                    android:layout_marginLeft="-20sp"
+                    android:id="@+id/expDuration"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup"
+            android:layout_marginBottom="10sp"
+            android:textAlignment="center"
+            android:paddingLeft="60sp"
+            android:background="#fff"
+            android:visibility="gone"
+            android:layout_margin="0sp"
+            >
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Cab"
+                android:id="@+id/cab"
+                android:fontFamily="@font/avantgrande"
+                android:paddingRight="50sp"
+
+                />
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Bike"
+                android:id="@+id/bike"
+                android:fontFamily="@font/avantgrande"
+
+                android:paddingRight="50sp"/>
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Auto"
+
+                android:fontFamily="@font/avantgrande"
+
+                android:id="@+id/auto"
+                android:paddingRight="50sp"/>
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/paymentMethod"
+            android:layout_width="fill_parent"
+            android:layout_height="50sp"
+            android:background="#fff"
+            android:backgroundTint="#fff"
+            android:prompt="@string/paymentMet"
+            android:theme="@style/AlertDialog.AppCompat"
+            android:textAlignment="center"
+            android:visibility="gone"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM RIDE"
+            android:fontFamily="@font/avantgrande"
+            android:background="#4286f4"
+            android:id="@+id/bookRide"
+            android:visibility="gone"
+            android:textColor="#fff"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BOOK A CAB"
+                android:id="@+id/request"
+                android:background="@drawable/buttonshape"
+                android:fontFamily="@font/avantgrande"
+
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ffaa00"
+        android:fontFamily="@font/avantgrande"
+
+        android:text="CANCEL"
+        android:visibility="gone" />
+</FrameLayout>

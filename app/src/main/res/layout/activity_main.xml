@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.cabapp.deep.MainActivity"
+    android:padding="15sp"
+    android:background="@drawable/custom_bckground"
+    android:gravity="center">
+
+    <ImageView android:src="@mipmap/mainlogo"
+        android:layout_width="300dp"
+        android:layout_marginTop="2dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/logo"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/driver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I'M A DRIVER"
+        android:layout_marginBottom="15sp"
+        android:fontFamily="@font/avantgrande"
+        android:textColor="#000000"
+        android:background="@drawable/buttonshape"
+        />
+
+    <Button
+
+        android:id="@+id/customer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I'M A CUSTOMER"
+        android:fontFamily="@font/avantgrande"
+        android:textColor="#000000"
+        android:background="@drawable/buttonshape"/>
+</LinearLayout>

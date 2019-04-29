@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cabapp.deep.CustomerSettingsActivity"
+    android:orientation="vertical"
+    android:padding="30sp"
+    android:scrollbarTrackVertical="@color/colorPrimaryDark">
+
+
+        <ImageView
+
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:id="@+id/profileImage"
+            android:src="@mipmap/ic_default_user"
+            android:layout_marginBottom="30sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Enter Name"
+            android:padding="5.0dp"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/name"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Enter Car Model"
+            android:padding="5.0dp"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/car"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Enter License"
+            android:padding="5.0dp"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/license"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Mobile"
+            android:padding="5.0dp"
+            android:layout_marginBottom="20sp"
+            android:id="@+id/phone"
+            android:inputType="number"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_marginBottom="10sp">
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Cab"
+            android:id="@+id/type1"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Bike"
+            android:id="@+id/type2"/>
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Auto"
+            android:id="@+id/type3"/>
+    </RadioGroup>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="CONFIRM"
+            android:id="@+id/confirm"
+            android:layout_marginBottom="20sp"
+            android:background="#ff6600"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="BACK"
+            android:id="@+id/back"
+            android:background="#ff6600"
+            />
+
+
+
+</LinearLayout>
+</ScrollView>

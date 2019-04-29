@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cabapp.deep.HistorySingleActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10sp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="From - To "
+                android:fontFamily="@font/avantgrande"
+                android:textColor="#ffffff"
+                android:layout_margin="10sp"
+                android:id="@+id/rideLocation"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Distance "
+            android:fontFamily="@font/avantgrande"
+            android:textColor="#ffffff"
+            android:layout_margin="10sp"
+            android:id="@+id/rideDistance"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Date "
+            android:fontFamily="@font/avantgrande"
+            android:textColor="#ffffff"
+            android:layout_margin="10sp"
+            android:id="@+id/rideDate"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Price "
+            android:fontFamily="@font/avantgrande"
+            android:textColor="#ffffff"
+            android:layout_margin="10sp"
+            android:id="@+id/ridePrice"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10sp">
+        <ImageView
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:text="From - To "
+            android:layout_margin="10sp"
+            android:id="@+id/userImage"
+            android:src="@mipmap/ic_default_user"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Name"
+                android:fontFamily="@font/avantgrande"
+                android:textColor="#ffffff"
+                android:layout_margin="10sp"
+                android:id="@+id/userName"/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Phone "
+                android:fontFamily="@font/avantgrande"
+                android:textColor="#ffffff"
+                android:layout_margin="10sp"
+                android:id="@+id/userPhone"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RatingBar
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/ratingBar"
+        android:layout_gravity="center"
+        android:numStars="5"
+        android:stepSize="1"
+        android:visibility="gone"/>
+
+</LinearLayout>

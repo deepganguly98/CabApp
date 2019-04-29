@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <color android:color="#202020" />
+    </item>
+    <item>
+    <bitmap android:src="@mipmap/mainlogo"
+        android:gravity="center"
+        android:width="60dp"
+        android:height="60dp"
+
+         />
+</item>
+</layer-list>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CabApp</string>
+    <string name="title_activity_driver_map">Map</string>
+    <string name="title_activity_customer_register">CustomerRegisterActivity</string>
+    <string name="title_activity_driver_register">DriverRegisterActivity</string>
+    <string name="title_activity_map">MapActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="gps_network_not_enabled">GPS not enabled</string>
+    <string name="open_location_settings">Open Location Settings</string>
+    <string name="Cancel">Cancel</string>
+    <string name="paymentMet">Choose a payment method</string>
+    <string name="Rs">\u20B9</string>
+</resources>

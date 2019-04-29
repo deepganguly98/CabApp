@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.cabapp.deep.CollectCashActivity">
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_height="350sp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="35sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                app:cardCornerRadius="30dp"
+                android:id="@+id/customerData"
+                android:backgroundTint="#636664"
+                >
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:layout_marginTop="20sp"
+                        android:id="@+id/amount"
+                        android:text="@string/Rs"
+                        android:textSize="35sp"
+                        android:textAlignment="center"
+                        android:textColor="#fff"
+                        android:padding="30sp"
+
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:text="Base Fare - "
+                        android:padding="10sp"
+                        android:id="@+id/baseFare"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:text="Distance Fare - "
+                        android:id="@+id/distFare"
+                        android:padding="10sp"
+                        android:textColor="#fff"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35sp"
+                        android:text="Time Fare - "
+                        android:id="@+id/timeFare"
+                        android:padding="10sp"
+                        android:textColor="#fff"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_height="50sp"
+                android:layout_width="match_parent"
+                android:layout_below="@id/customerData"
+                android:layout_marginLeft="20sp"
+                app:cardCornerRadius="20sp"
+                android:backgroundTint="#62db68"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="50sp">
+
+                <Button
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:text="COLLECT CASH"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:id="@+id/collect"
+                    android:fontFamily="@font/avantgrande"
+
+                    />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
